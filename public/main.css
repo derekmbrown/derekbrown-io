@@ -1,0 +1,175 @@
+html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  background-color: #212121;
+}
+
+.container {
+  max-width: 600px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  display: flex;
+  margin-right: 30px;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 10px;
+  font-size: 17px;
+}
+
+nav ul li a:hover {
+  border-bottom: 3px solid white;
+}
+
+nav .logo {
+  font-size: 25px;
+  margin-left: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+nav .logo:hover {
+  border-bottom: 3px solid white;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+/* End Navbar Styles */
+
+/* Main Styles */
+main {
+  flex: 1;
+  display: flex;
+}
+
+main .main-container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+main header {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+main p {
+  font-size: 17px;
+}
+
+main p a {
+  color: lightskyblue;
+  text-decoration: none;
+}
+
+main p a:hover {
+  border-bottom: 3px solid lightskyblue;
+}
+
+main .index-container img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
+main .index-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  width: 100vh;
+}
+
+main .index-container h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+main .contact-container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+  width: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .contact-container table {
+  margin-top: 10px;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  text-align: center;
+  font-size: 17px;
+}
+
+main .contact-container table tr td a {
+  color: lightskyblue;
+  text-decoration: none;
+}
+
+main .contact-container table tr td a:hover {
+  color: lightskyblue;
+  border-bottom: 2px solid lightskyblue;
+}
+
+main .project-container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+  width: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/* End Main Styles */
+
+/* Footer Styles */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: 17px;
+}
+/* End Footer Styles */
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+  nav {
+    justify-content: center;
+    padding-top: 30px;
+  }
+
+  nav .logo {
+    margin-left: 0px;
+  }
+}
+/* End Mobile Styles */

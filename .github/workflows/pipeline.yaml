@@ -1,0 +1,50 @@
+name: Personal Website CI/CD Pipeline
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  validate_tf:
+    name: Validate Terraform
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: dflook/terraform-validate@v1
+      with:
+        PATH: 'infra'
+  deploy_code:
+    name: Deploy Code
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: jakejarvis/s3-sync-action@v0.5.1
+      with:
+        args: --acl public-read --follow-symlinks --delete
+      env:
+        AWS_S3_BUCKET: 'derekbrown.io'
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'us-east-1'
+        SOURCE_DIR: 'public'
+    needs: validate_tf
+  check_site_status:
+    name: Check Site Status
+    runs-on: ubuntu-latest
+    steps:
+    - uses: lakuapik/gh-actions-http-status@v1
+      with:
+        sites: '["https://derekbrown.io", "https://www.derekbrown.io"]'
+        expected: '[200, 301]'
+    needs: deploy_code
+  send_discord_msg:
+    name: Send Discord Message
+    runs-on: ubuntu-latest
+    steps:
+    - uses: Ilshidur/action-discord@master
+      with:
+        args: 'https://derekbrown.io has been deployed.'
+    env:
+      DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+    needs: check_site_status
