@@ -11,12 +11,7 @@ This repository contains my personal website.
 
 - View the resources this module creates [here](https://github.com/derekmbrown/derekbrown-io/tree/main/infra/module).
 
-```terraform
-module "personal_website" {
-    source      = "./module"
-    domain_name = "derekbrown.io"
-}
-```
+![Module Image](img/module.png)
 
 ### Deployment Pipeline
 
