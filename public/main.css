@@ -3,8 +3,8 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-  color: white;
-  background-color: #212121;
+  color: black;
+  background-color: white;
 }
 
 .container {
@@ -17,7 +17,6 @@ html, body {
 
 /* Navbar Styles */
 nav {
-  /* border: 1px solid white; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,7 +37,7 @@ nav ul li {
 }
 
 nav ul li a:hover {
-  border-bottom: 3px solid white;
+  border-bottom: 2px solid black;
 }
 
 nav .logo {
@@ -49,7 +48,7 @@ nav .logo {
 
 nav ul li a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 nav .logo img {
@@ -60,7 +59,6 @@ nav .logo img {
 
 /* Main Styles */
 main {
-  /* border: 1px solid white; */
   flex: 1;
   display: flex;
 }
@@ -83,12 +81,13 @@ main p {
 }
 
 main p a {
-  color: lightskyblue;
+  color: blue;
   text-decoration: none;
+  font-weight: bold;
 }
 
 main p a:hover {
-  border-bottom: 3px solid lightskyblue;
+  border-bottom: 2px solid blue;
 }
 
 main .index-container img {
@@ -142,13 +141,13 @@ main .contact-container table {
 }
 
 main .contact-container table tr td a {
-  color: lightskyblue;
+  color: blue;
   text-decoration: none;
+  font-weight: bold;
 }
 
 main .contact-container table tr td a:hover {
-  color: lightskyblue;
-  border-bottom: 2px solid lightskyblue;
+  border-bottom: 2px solid blue;
 }
 
 main .project-container {
@@ -164,7 +163,6 @@ main .project-container {
 
 /* Footer Styles */
 footer {
-  /* border: 1px solid white; */
   display: flex;
   justify-content: center;
   align-items: center;
