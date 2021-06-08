@@ -195,5 +195,9 @@ footer {
 /* End Footer Styles */
 
 /* Mobile Styles */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+  main .contact-container table {
+    font-size: 20px;
+  }
+}
 /* End Mobile Styles */
