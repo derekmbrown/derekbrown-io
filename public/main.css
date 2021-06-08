@@ -71,15 +71,12 @@ main .main-container {
 }
 
 main header {
-  padding-top: 10px;
   font-size: 30px;
   font-weight: bold;
 }
 
 main p {
   font-size: 17px;
-  margin: 0;
-  margin-top: 20px;
 }
 
 main p a {
@@ -162,8 +159,8 @@ main .contact-container table {
   margin-top: 10px;
   border-collapse: separate;
   border-spacing: 0 10px;
-  text-align: center;
-  font-size: 17px;
+  text-align: left;
+  font-size: 25px;
 }
 
 main .contact-container table tr td a {
