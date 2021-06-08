@@ -134,8 +134,16 @@ main .index-container .social-icons .fa:hover {
   opacity: 0.7;
 }
 
-.fa {
-  color: black;
+.fa-linkedin {
+  color: #2867B2;
+}
+
+.fa-github {
+  color: #333;
+}
+
+.fa-twitter {
+  color: #1DA1F2;
 }
 
 main .contact-container {
