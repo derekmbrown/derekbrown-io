@@ -41,6 +41,13 @@ resource "aws_cloudfront_distribution" "root_distribution" {
     }
   }
 
+  custom_error_response {
+    error_caching_min_ttl = 86400
+    error_code            = 404
+    response_code         = 200
+    response_page_path    = "/404.html"
+  }
+
   restrictions {
     geo_restriction {
       restriction_type = "none"
@@ -99,6 +106,13 @@ resource "aws_cloudfront_distribution" "www_distribution" {
         forward = "none"
       }
     }
+  }
+
+  custom_error_response {
+    error_caching_min_ttl = 86400
+    error_code            = 404
+    response_code         = 200
+    response_page_path    = "/404.html"
   }
 
   restrictions {
