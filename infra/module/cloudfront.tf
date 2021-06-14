@@ -13,6 +13,7 @@ resource "aws_cloudfront_distribution" "root_distribution" {
 
   enabled             = true
   default_root_object = "index.html"
+  comment             = "Distro to front dmbrown.io"
   price_class         = "PriceClass_100"
   retain_on_delete    = true
   aliases             = [local.root_domain_name]
@@ -25,6 +26,11 @@ resource "aws_cloudfront_distribution" "root_distribution" {
     min_ttl                = 0
     default_ttl            = 3600
     max_ttl                = 86400
+
+    function_association {
+      event_type   = "viewer-request"
+      function_arn = aws_cloudfront_function.rewrite_url.arn
+    }
 
     forwarded_values {
       query_string = false
@@ -67,6 +73,7 @@ resource "aws_cloudfront_distribution" "www_distribution" {
 
   enabled             = true
   default_root_object = "index.html"
+  comment             = "Distro to front www.dmbrown.io"
   price_class         = "PriceClass_100"
   retain_on_delete    = true
   aliases             = [local.www_domain_name]
@@ -79,6 +86,11 @@ resource "aws_cloudfront_distribution" "www_distribution" {
     min_ttl                = 0
     default_ttl            = 3600
     max_ttl                = 86400
+
+    function_association {
+      event_type   = "viewer-request"
+      function_arn = aws_cloudfront_function.rewrite_url.arn
+    }
 
     forwarded_values {
       query_string = true

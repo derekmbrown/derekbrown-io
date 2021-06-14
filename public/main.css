@@ -182,6 +182,26 @@ main .project-container {
   display: flex;
   flex-direction: column;
 }
+
+main .error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vh;
+}
+
+main .error-container h1 {
+  font-size: 100px;
+  padding-right: 22px;
+  animation: type .5s alternate infinite;
+}
+
+@keyframes type{
+  from{box-shadow: inset -7px 0px 0px #888;}
+  to{box-shadow: inset -7px 0px 0px transparent;}
+}
+
 /* End Main Styles */
 
 /* Footer Styles */
