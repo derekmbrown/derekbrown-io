@@ -2,7 +2,11 @@ function handler(event) {
   var request = event.request;
   var uri = request.uri;
 
-  if (uri.endsWith('/') || uri.endsWith('/index')) {
+  if (uri.endsWith('/index')) {
+    request.uri = '/';
+  }
+
+  if (uri.endsWith('/')) {
     request.uri = '/index.html';
   }
 

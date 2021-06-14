@@ -219,5 +219,9 @@ footer {
   main .contact-container table {
     font-size: 20px;
   }
+
+  main .error-container h1 {
+    font-size: 60px;
+  }
 }
 /* End Mobile Styles */
