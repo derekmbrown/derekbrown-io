@@ -131,6 +131,10 @@ main .index-container .social-icons .fa:hover {
   opacity: 0.7;
 }
 
+.fa-envelope {
+  color: #000;
+}
+
 .fa-linkedin {
   color: #2867B2;
 }
