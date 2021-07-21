@@ -4,7 +4,7 @@ terraform {
       source = "hashicorp/aws"
     }
   }
-  required_version = "~> 0.15"
+  required_version = ">= 1.0.0, < 2.0.0"
 
   backend "s3" {
     region  = "us-east-1"
