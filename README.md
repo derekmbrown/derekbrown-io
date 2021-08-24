@@ -4,7 +4,7 @@ This repository contains my personal website.
 
 - Designed with HTML5, CSS3, and Flexbox.
 - Hosted in S3 fronted by CloudFront.
-- Infrastructure is configured in Terraform v0.15.5 stored in S3 remote backend.
+- Infrastructure is configured in Terraform v1.0.5 stored in S3 remote backend.
 - Deployment pipeline is setup by multiple GitHub Actions.
 
 ### Terraform Module
