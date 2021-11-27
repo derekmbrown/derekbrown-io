@@ -218,6 +218,10 @@ footer {
 }
 /* End Footer Styles */
 
+.active-tab {
+  border-bottom: 2px solid black;
+}
+
 /* Mobile Styles */
 @media only screen and (max-width: 600px) {
   main .contact-container table {
